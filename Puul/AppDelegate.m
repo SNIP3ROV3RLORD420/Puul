@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import <Parse/Parse.h>
 #import "PURoute.h"
+#import "PUStartViewController.h"
+#import "UIColor+PUColors.h"
 
 @interface AppDelegate ()
 
@@ -19,16 +21,22 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
-    
     [PURoute registerSubclass];
     
     [Parse setApplicationId:@"xhcdRU2xngBSYbvNvc2Br2EQHWFugQRbHMF8cVpZ"
                   clientKey:@"mpk7vop9hcRKVySXtiNc4UUALMwSk7JMthnpshNF"];
     
     [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.backgroundColor = [UIColor whiteColor];
+    
+    [self setUpForNewUser];
+    
+    NSDictionary *textTitleOptions = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor], NSForegroundColorAttributeName];
+    [[UINavigationBar appearance] setTitleTextAttributes:textTitleOptions];
+    
+    [self.window makeKeyAndVisible];
     
     return YES;
 }
@@ -53,6 +61,19 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+- (void)setUpForCurrentUser{
+    
+}
+
+- (void)setUpForNewUser{
+    PUStartViewController *p = [[PUStartViewController alloc]init];
+    UINavigationController *controller = [[UINavigationController alloc]initWithRootViewController:p];
+    controller.navigationBar.tintColor = [UIColor whiteColor];
+    controller.navigationBar.barTintColor = [UIColor puulRedColor];
+    controller.navigationBar.translucent = NO;
+    self.window.rootViewController = controller;
 }
 
 @end

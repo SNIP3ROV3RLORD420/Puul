@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIImage_PUImageExtensions : UIImage
+@interface UIImage (PUImageExtensions)
+
++ (UIImage*)backgroundImageForButton:(UIButton*)button;
 
 @end

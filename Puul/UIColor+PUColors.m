@@ -7,7 +7,12 @@
 //
 
 #import "UIColor+PUColors.h"
+#import "PUConstants.h"
 
-@implementation UIColor_PUColors
+@implementation UIColor(PUColors)
+
++ (UIColor*)puulRedColor{
+    return UIColorFromRGB(0xff4c4c);
+}
 
 @end

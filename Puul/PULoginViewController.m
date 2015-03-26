@@ -18,9 +18,21 @@
 
 @implementation PULoginViewController
 
+#pragma mark - Life Cycle
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.title = @"Login";
+    self.view.backgroundColor = [UIColor whiteColor];
+    
     // Do any additional setup after loading the view.
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    
+    [self.navigationController setNavigationBarHidden:NO animated:YES];
 }
 
 #pragma mark - Button Methods

@@ -10,4 +10,6 @@
 
 @interface PUUtility : NSObject
 
++ (BOOL)containsIllegalCharacters:(NSString *)string;
+
 @end

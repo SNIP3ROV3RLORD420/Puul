@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface UIColor_PUColors : UIColor
+@interface UIColor (PUColors)
+
++ (UIColor*)puulRedColor;
 
 @end

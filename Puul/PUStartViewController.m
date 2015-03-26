@@ -9,6 +9,8 @@
 #import "PUStartViewController.h"
 #import "PULoginViewController.h"
 #import "PUSignUpViewController.h"
+#import "UIImage+PUImageExtensions.h"
+#import "UIColor+PUColors.h"
 
 @interface PUStartViewController (){
     UIButton *loginButton;
@@ -23,12 +25,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor lightGrayColor];
+    self.title = @" ";
+    self.view.backgroundColor = [UIColor puulRedColor];
     
     //allocating and initializing the title label
     titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 50, self.view.bounds.size.width, 100)];
     titleLabel.font = [UIFont boldSystemFontOfSize:50];
-    titleLabel.text = @"Puul";
+    titleLabel.text = @"P uu l";
     titleLabel.textAlignment = NSTextAlignmentCenter;
     titleLabel.textColor = [UIColor whiteColor];
     
@@ -38,9 +41,12 @@
     signUpButton = [[UIButton alloc]initWithFrame:CGRectMake(10, self.view.bounds.size.height - 110, self.view.bounds.size.width - 20, 45)];
     [signUpButton setTitle:@"Register with HW Email" forState:UIControlStateNormal];
     [signUpButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    signUpButton.layer.cornerRadius = 4.0;
+    signUpButton.layer.cornerRadius = 4.0f;
     signUpButton.layer.borderColor = [UIColor whiteColor].CGColor;
+    signUpButton.layer.borderWidth = 1.0f;
+    signUpButton.clipsToBounds = YES;
     [signUpButton addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchUpInside];
+    [signUpButton setImage:[UIImage backgroundImageForButton:signUpButton] forState:UIControlStateHighlighted];
     
     [self.view addSubview:signUpButton];
     
@@ -48,11 +54,20 @@
     loginButton = [[UIButton alloc]initWithFrame:CGRectMake(10, self.view.bounds.size.height - 55, self.view.bounds.size.width - 20, 45)];
     [loginButton setTitle:@"Log In" forState:UIControlStateNormal];
     [loginButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    loginButton.layer.cornerRadius = 4.0;
+    loginButton.layer.cornerRadius = 4.0f;
     loginButton.layer.borderColor = [UIColor whiteColor].CGColor;
+    loginButton.layer.borderWidth = 1.0f;
+    loginButton.clipsToBounds = YES;
     [loginButton addTarget:self action:@selector(buttonPressed:) forControlEvents:UIControlEventTouchUpInside];
+    [loginButton setImage:[UIImage backgroundImageForButton:loginButton] forState:UIControlStateHighlighted];
     
     [self.view addSubview:loginButton];
+}
+
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self.navigationController setNavigationBarHidden:YES animated:YES];
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:YES];
 }
 
 #pragma mark - Button Methods
