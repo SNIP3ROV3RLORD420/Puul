@@ -22,6 +22,9 @@
 		BFCBD3221AC2028B00B66689 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFCBD3211AC2028B00B66689 /* SystemConfiguration.framework */; };
 		BFCBD3241AC2029100B66689 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BFCBD3231AC2029100B66689 /* libz.dylib */; };
 		BFCBD3261AC2029900B66689 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BFCBD3251AC2029900B66689 /* libsqlite3.dylib */; };
+		BFE6707B1AC35FA30091598C /* UIImage+PUImageExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE6707A1AC35FA30091598C /* UIImage+PUImageExtensions.m */; };
+		BFE670801AC3787E0091598C /* UIColor+PUColors.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE6707F1AC3787E0091598C /* UIColor+PUColors.m */; };
+		BFE670831AC3806F0091598C /* PUUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE670821AC3806F0091598C /* PUUtility.m */; };
 		BFF50CD51AC317CE003CF0C8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF50CD41AC317CE003CF0C8 /* AppDelegate.m */; };
 		BFF50CDA1AC317E2003CF0C8 /* PUSignUpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF50CD71AC317E2003CF0C8 /* PUSignUpViewController.m */; };
 		BFF50CDB1AC317E2003CF0C8 /* PUStartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF50CD91AC317E2003CF0C8 /* PUStartViewController.m */; };
@@ -29,6 +32,7 @@
 		BFF50CE11AC317F5003CF0C8 /* PURoute.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF50CE01AC317F5003CF0C8 /* PURoute.m */; };
 		BFF50CE51AC318DC003CF0C8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF50CE41AC318DC003CF0C8 /* main.m */; };
 		BFF50CE91AC3191F003CF0C8 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BFF50CE81AC3191F003CF0C8 /* Info.plist */; };
+		BFF50CEB1AC33E07003CF0C8 /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFF50CEA1AC33E07003CF0C8 /* Launch Screen.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +64,13 @@
 		BFCBD3211AC2028B00B66689 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		BFCBD3231AC2029100B66689 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		BFCBD3251AC2029900B66689 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		BFE670791AC35FA30091598C /* UIImage+PUImageExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+PUImageExtensions.h"; sourceTree = "<group>"; };
+		BFE6707A1AC35FA30091598C /* UIImage+PUImageExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+PUImageExtensions.m"; sourceTree = "<group>"; };
+		BFE6707D1AC3780A0091598C /* PUConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PUConstants.h; sourceTree = "<group>"; };
+		BFE6707E1AC3787E0091598C /* UIColor+PUColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+PUColors.h"; sourceTree = "<group>"; };
+		BFE6707F1AC3787E0091598C /* UIColor+PUColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+PUColors.m"; sourceTree = "<group>"; };
+		BFE670811AC3806F0091598C /* PUUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PUUtility.h; sourceTree = "<group>"; };
+		BFE670821AC3806F0091598C /* PUUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PUUtility.m; sourceTree = "<group>"; };
 		BFF50CD31AC317CE003CF0C8 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BFF50CD41AC317CE003CF0C8 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		BFF50CD61AC317E2003CF0C8 /* PUSignUpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PUSignUpViewController.h; sourceTree = "<group>"; };
@@ -72,6 +83,7 @@
 		BFF50CE01AC317F5003CF0C8 /* PURoute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PURoute.m; sourceTree = "<group>"; };
 		BFF50CE41AC318DC003CF0C8 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BFF50CE81AC3191F003CF0C8 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFF50CEA1AC33E07003CF0C8 /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,11 +140,15 @@
 		BFCBD2921AC1FDA600B66689 /* Puul */ = {
 			isa = PBXGroup;
 			children = (
+				BFE6707C1AC377D90091598C /* Utility */,
+				BFF50CED1AC34514003CF0C8 /* Extensions */,
+				BFF50CEC1AC34485003CF0C8 /* Control */,
 				BFF50CD31AC317CE003CF0C8 /* AppDelegate.h */,
 				BFF50CD41AC317CE003CF0C8 /* AppDelegate.m */,
 				BFCBD2D91AC1FE2B00B66689 /* Model */,
 				BFCBD2D81AC1FE2300B66689 /* View Controllers */,
 				BFCBD2931AC1FDA600B66689 /* Supporting Files */,
+				BFF50CEA1AC33E07003CF0C8 /* Launch Screen.xib */,
 			);
 			path = Puul;
 			sourceTree = "<group>";
@@ -206,6 +222,34 @@
 			name = Model;
 			sourceTree = "<group>";
 		};
+		BFE6707C1AC377D90091598C /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				BFE6707D1AC3780A0091598C /* PUConstants.h */,
+				BFE670811AC3806F0091598C /* PUUtility.h */,
+				BFE670821AC3806F0091598C /* PUUtility.m */,
+			);
+			name = Utility;
+			sourceTree = "<group>";
+		};
+		BFF50CEC1AC34485003CF0C8 /* Control */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Control;
+			sourceTree = "<group>";
+		};
+		BFF50CED1AC34514003CF0C8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BFE670791AC35FA30091598C /* UIImage+PUImageExtensions.h */,
+				BFE6707A1AC35FA30091598C /* UIImage+PUImageExtensions.m */,
+				BFE6707E1AC3787E0091598C /* UIColor+PUColors.h */,
+				BFE6707F1AC3787E0091598C /* UIColor+PUColors.m */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -255,6 +299,7 @@
 				TargetAttributes = {
 					BFCBD28F1AC1FDA600B66689 = {
 						CreatedOnToolsVersion = 6.1.1;
+						DevelopmentTeam = XS9EAE8YBF;
 					};
 					BFCBD2A81AC1FDA700B66689 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -287,6 +332,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFF50CE91AC3191F003CF0C8 /* Info.plist in Resources */,
+				BFF50CEB1AC33E07003CF0C8 /* Launch Screen.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,7 +354,10 @@
 				BFF50CDB1AC317E2003CF0C8 /* PUStartViewController.m in Sources */,
 				BFF50CE11AC317F5003CF0C8 /* PURoute.m in Sources */,
 				BFF50CD51AC317CE003CF0C8 /* AppDelegate.m in Sources */,
+				BFE670801AC3787E0091598C /* UIColor+PUColors.m in Sources */,
 				BFF50CE51AC318DC003CF0C8 /* main.m in Sources */,
+				BFE6707B1AC35FA30091598C /* UIImage+PUImageExtensions.m in Sources */,
+				BFE670831AC3806F0091598C /* PUUtility.m in Sources */,
 				BFF50CDE1AC317ED003CF0C8 /* PULoginViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -412,6 +461,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -423,6 +474,7 @@
 					"$(PROJECT_DIR)",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -430,6 +482,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -441,6 +495,7 @@
 					"$(PROJECT_DIR)",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
