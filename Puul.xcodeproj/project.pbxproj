@@ -33,6 +33,8 @@
 		BFF50CE51AC318DC003CF0C8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF50CE41AC318DC003CF0C8 /* main.m */; };
 		BFF50CE91AC3191F003CF0C8 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BFF50CE81AC3191F003CF0C8 /* Info.plist */; };
 		BFF50CEB1AC33E07003CF0C8 /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFF50CEA1AC33E07003CF0C8 /* Launch Screen.xib */; };
+		EEC481E71ADC2843009A8C66 /* MainPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC481E61ADC2843009A8C66 /* MainPageViewController.m */; };
+		EEC481EA1ADC294D009A8C66 /* PULoginLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC481E91ADC294D009A8C66 /* PULoginLoginViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +86,10 @@
 		BFF50CE41AC318DC003CF0C8 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BFF50CE81AC3191F003CF0C8 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFF50CEA1AC33E07003CF0C8 /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
+		EEC481E51ADC2843009A8C66 /* MainPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainPageViewController.h; sourceTree = "<group>"; };
+		EEC481E61ADC2843009A8C66 /* MainPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainPageViewController.m; sourceTree = "<group>"; };
+		EEC481E81ADC294D009A8C66 /* PULoginLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PULoginLoginViewController.h; sourceTree = "<group>"; };
+		EEC481E91ADC294D009A8C66 /* PULoginLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PULoginLoginViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,7 +148,6 @@
 			children = (
 				BFE6707C1AC377D90091598C /* Utility */,
 				BFF50CED1AC34514003CF0C8 /* Extensions */,
-				BFF50CEC1AC34485003CF0C8 /* Control */,
 				BFF50CD31AC317CE003CF0C8 /* AppDelegate.h */,
 				BFF50CD41AC317CE003CF0C8 /* AppDelegate.m */,
 				BFCBD2D91AC1FE2B00B66689 /* Model */,
@@ -209,6 +214,10 @@
 				BFF50CD71AC317E2003CF0C8 /* PUSignUpViewController.m */,
 				BFF50CD81AC317E2003CF0C8 /* PUStartViewController.h */,
 				BFF50CD91AC317E2003CF0C8 /* PUStartViewController.m */,
+				EEC481E81ADC294D009A8C66 /* PULoginLoginViewController.h */,
+				EEC481E91ADC294D009A8C66 /* PULoginLoginViewController.m */,
+				EEC481E51ADC2843009A8C66 /* MainPageViewController.h */,
+				EEC481E61ADC2843009A8C66 /* MainPageViewController.m */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -230,13 +239,6 @@
 				BFE670821AC3806F0091598C /* PUUtility.m */,
 			);
 			name = Utility;
-			sourceTree = "<group>";
-		};
-		BFF50CEC1AC34485003CF0C8 /* Control */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Control;
 			sourceTree = "<group>";
 		};
 		BFF50CED1AC34514003CF0C8 /* Extensions */ = {
@@ -350,6 +352,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEC481EA1ADC294D009A8C66 /* PULoginLoginViewController.m in Sources */,
+				EEC481E71ADC2843009A8C66 /* MainPageViewController.m in Sources */,
 				BFF50CDA1AC317E2003CF0C8 /* PUSignUpViewController.m in Sources */,
 				BFF50CDB1AC317E2003CF0C8 /* PUStartViewController.m in Sources */,
 				BFF50CE11AC317F5003CF0C8 /* PURoute.m in Sources */,

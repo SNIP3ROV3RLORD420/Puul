@@ -18,6 +18,11 @@
     UITextField *passwordTextField;
     UITextField *emailTextField;
     UITextField *nameTextField;
+    
+    BOOL username;
+    BOOL password;
+    BOOL email;
+    BOOL name;
 }
 
 @end
@@ -83,6 +88,7 @@
             passwordTextField.placeholder = @"HW Password";
             passwordTextField.leftView = paddingView;
             passwordTextField.leftViewMode = UITextFieldViewModeAlways;
+            passwordTextField.secureTextEntry = YES;
             passwordTextField.delegate = self;
             [cell.contentView addSubview:passwordTextField];
         }
@@ -107,16 +113,17 @@
             [cell.contentView addSubview:nameTextField];
         }
     }
+    
     if (indexPath.row == 4) {
-        if ([self checkTextFields]) {
+        if (username && password && email) {
             cell.contentView.backgroundColor = [UIColor greenColor];
             cell.selectionStyle = UITableViewCellSelectionStyleDefault;
         }
         else{
-            cell.contentView.backgroundColor = [UIColor redColor];
+            cell.contentView.backgroundColor = [UIColor puulRedColor];
             cell.selectionStyle = UITableViewCellSelectionStyleNone;
         }
-        UILabel *label = [[UILabel alloc]initWithFrame:cell.frame];
+        UILabel *label = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, 50)];
         label.text = @"Sign Up";
         label.textColor = [UIColor whiteColor];
         label.textAlignment = NSTextAlignmentCenter;
@@ -126,123 +133,59 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    if (indexPath.row == 4 && [self checkTextFields]) {
+    if (indexPath.row == 4 && username && password && email && name) {
         //try to sign up the user
+        PFUser *user = [PFUser user];
+        user.username = usernameTextField.text;
+        user.password = passwordTextField.text;
+        user.email = emailTextField.text;
+        user[@"name"] = nameTextField.text;
+        [user signUpInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+            if (!error) {
+                [self.navigationController popToRootViewControllerAnimated:YES];
+                NSLog(@"SUCCESSS");
+            }
+            else{
+                NSLog(@"%@", error);
+            }
+        }];
     }
 }
 
 #pragma mark - UITextFieldDelegate
 
-- (void)textFieldDidEndEditing:(UITextField *)textField{
+- (BOOL)textFieldShouldReturn:(UITextField *)textField{
     if (textField == usernameTextField) {
         [passwordTextField becomeFirstResponder];
+        if (textField.text.length > 0) {
+            username = YES;
+        }
     }
     if (textField == passwordTextField) {
         [emailTextField becomeFirstResponder];
+        if (textField.text.length > 0) {
+            password = YES;
+        }
     }
     if (textField == emailTextField) {
         [nameTextField becomeFirstResponder];
+        if (textField.text.length > 0) {
+            email = YES;
+        }
     }
-    [self checkTextFields];
+    if (textField == nameTextField) {
+        [nameTextField resignFirstResponder];
+        if (nameTextField.text.length > 0) {
+            name = YES;
+        }
+    }
+    if (email && username && password && name) {
+        [self reloadLastRow];
+    }
+    return YES;
 }
 
 #pragma mark - Helper Methods
-
-- (BOOL)checkTextFields{
-    if ([self usernameGood] && [self emailGood] && [self passwordGood]) {
-        [self reloadLastRow];
-        return YES;
-    }
-    return NO;
-}
-
-- (BOOL)usernameGood{
-    if (usernameTextField.text.length == 0) {
-        return NO;
-    }
-    PFQuery *query = [PFUser query];
-    [query whereKey:@"username" equalTo:usernameTextField.text];
-    if ([query getFirstObject]) {
-        usernameTextField.textColor = [UIColor redColor];
-        return NO;
-    }
-    if ([PUUtility containsIllegalCharacters:usernameTextField.text]) {
-        usernameTextField.textColor = [UIColor redColor];
-        return NO;
-    }
-    usernameTextField.textColor = [UIColor blackColor];
-    return YES;
-}
-
-- (BOOL)emailGood{
-    if (emailTextField.text.length == 0) {
-        return NO;
-    }
-    PFQuery *query = [PFUser query];
-    [query whereKey:@"email" equalTo:emailTextField.text];
-    if ([query getFirstObject]) {
-        emailTextField.textColor = [UIColor redColor];
-        return NO;
-    }
-    if ([emailTextField.text containsString:@"@"] && [emailTextField.text containsString:@"."]){
-        NSArray *substrings = [emailTextField.text componentsSeparatedByString:@"@"];
-        NSArray *substrings1 = [emailTextField.text componentsSeparatedByString:@"."];
-        if ([substrings[0] isEqualToString:@""]) {
-            emailTextField.textColor = [UIColor redColor];
-            return NO;
-        }
-        if ([substrings1[1] isEqualToString:@""]) {
-            emailTextField.textColor = [UIColor redColor];
-            return NO;
-        }
-        if ([substrings[1] characterAtIndex:0] == '.'){
-            emailTextField.textColor = [UIColor redColor];
-            return NO;
-        }
-        emailTextField.textColor = [UIColor whiteColor];
-        return YES;
-    }
-    else if ([emailTextField.text isEqualToString:@""]){
-        emailTextField.textColor = [UIColor whiteColor];
-        return YES;
-    }
-    else{
-        emailTextField.textColor = [UIColor redColor];
-        return NO;
-    }
-    return NO;
-}
-
-- (BOOL)passwordGood{
-    NSString *password = passwordTextField.text;
-    if (password.length == 0) {
-        return NO;
-    }
-    int count = 0;
-    for (int i = 0; i < 10; i++) {
-        if ([password containsString:[NSString stringWithFormat:@"%i", i]]) {
-            count++;
-        }
-    }
-    if (password.length > 5 && count > 0) {
-        passwordTextField.textColor = [UIColor whiteColor];
-        return YES;
-    }
-    if (password.length <= 5) {
-        passwordTextField.textColor = [UIColor redColor];
-        return NO;
-    }
-    if (count == 0) {
-        passwordTextField.textColor = [UIColor redColor];
-        return NO;
-    }
-    if ([PUUtility containsIllegalCharacters:password]) {
-        passwordTextField.textColor = [UIColor redColor];
-        return NO;
-    }
-    passwordTextField.textColor = [UIColor whiteColor];
-    return YES;
-}
 
 - (void)reloadLastRow{
     [sTableView beginUpdates];

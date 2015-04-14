@@ -31,7 +31,7 @@
     //allocating and initializing the title label
     titleLabel = [[UILabel alloc]initWithFrame:CGRectMake(0, 50, self.view.bounds.size.width, 100)];
     titleLabel.font = [UIFont boldSystemFontOfSize:50];
-    titleLabel.text = @"P uu l";
+    titleLabel.text = @"Puul";
     titleLabel.textAlignment = NSTextAlignmentCenter;
     titleLabel.textColor = [UIColor whiteColor];
     
