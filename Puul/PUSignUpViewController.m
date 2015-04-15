@@ -9,6 +9,7 @@
 #import "PUSignUpViewController.h"
 #import <Parse/Parse.h>
 #import "UIColor+PUColors.h"
+#import <BlocksKit/BlocksKit+UIKit.h>
 #import "PUUtility.h"
 
 @interface PUSignUpViewController ()<UITableViewDataSource, UITableViewDelegate, UITextFieldDelegate>{
@@ -115,7 +116,7 @@
     }
     
     if (indexPath.row == 4) {
-        if (username && password && email) {
+        if (username && password && email && name) {
             cell.contentView.backgroundColor = [UIColor greenColor];
             cell.selectionStyle = UITableViewCellSelectionStyleDefault;
         }
@@ -157,29 +158,43 @@
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{
     if (textField == usernameTextField) {
         [passwordTextField becomeFirstResponder];
+    }
+    if (textField == passwordTextField) {
+        [emailTextField becomeFirstResponder];
+    }
+    if (textField == emailTextField) {
+        [nameTextField becomeFirstResponder];
+    }
+    if (textField == nameTextField) {
+        [nameTextField resignFirstResponder];
+    }
+    
+    return YES;
+}
+
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
+    
+    if (textField == usernameTextField) {
         if (textField.text.length > 0) {
             username = YES;
         }
     }
     if (textField == passwordTextField) {
-        [emailTextField becomeFirstResponder];
         if (textField.text.length > 0) {
             password = YES;
         }
     }
     if (textField == emailTextField) {
-        [nameTextField becomeFirstResponder];
         if (textField.text.length > 0) {
             email = YES;
         }
     }
     if (textField == nameTextField) {
-        [nameTextField resignFirstResponder];
         if (nameTextField.text.length > 0) {
             name = YES;
         }
     }
-    if (email && username && password && name) {
+    if (username && password && email && name) {
         [self reloadLastRow];
     }
     return YES;
