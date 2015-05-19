@@ -1,18 +1,18 @@
 //
-//  PULoginLoginViewController.m
+//  PUCreateViewController.m
 //  Puul
 //
-//  Created by David Ho on 4/13/15.
+//  Created by David Ho on 5/18/15.
 //  Copyright (c) 2015 Dylan Humphrey. All rights reserved.
 //
-//
-#import "PULoginLoginViewController.h"
 
-@interface PULoginLoginViewController ()
+#import "PUCreateViewController.h"
+
+@interface PUCreateViewController ()
 
 @end
 
-@implementation PULoginLoginViewController
+@implementation PUCreateViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];

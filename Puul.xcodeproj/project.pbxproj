@@ -34,14 +34,20 @@
 		BFF50CE51AC318DC003CF0C8 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BFF50CE41AC318DC003CF0C8 /* main.m */; };
 		BFF50CE91AC3191F003CF0C8 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BFF50CE81AC3191F003CF0C8 /* Info.plist */; };
 		BFF50CEB1AC33E07003CF0C8 /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = BFF50CEA1AC33E07003CF0C8 /* Launch Screen.xib */; };
+		EE044AD11B02630A0052CC67 /* PUProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE044AD01B02630A0052CC67 /* PUProfileViewController.m */; };
+		EE044AD41B0263150052CC67 /* PUSettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE044AD31B0263150052CC67 /* PUSettingsViewController.m */; };
+		EE044ADA1B0501720052CC67 /* createRoute@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE044AD61B0501720052CC67 /* createRoute@2x.png */; };
+		EE044ADB1B0501720052CC67 /* feed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE044AD71B0501720052CC67 /* feed@2x.png */; };
+		EE044ADC1B0501720052CC67 /* profile@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE044AD81B0501720052CC67 /* profile@2x.png */; };
+		EE044ADD1B0501720052CC67 /* settings@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = EE044AD91B0501720052CC67 /* settings@2x.png */; };
+		EE044AE31B0A4A370052CC67 /* PUCreateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE044AE21B0A4A370052CC67 /* PUCreateViewController.m */; };
 		EE3471981ADEC606005B4344 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE3471971ADEC606005B4344 /* MessageUI.framework */; };
 		EE34719A1ADEC65C005B4344 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE3471991ADEC65C005B4344 /* Social.framework */; };
 		EE34719D1ADEC692005B4344 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE34719B1ADEC692005B4344 /* Accelerate.framework */; };
 		EE34719E1ADEC692005B4344 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE34719C1ADEC692005B4344 /* Accounts.framework */; };
 		EE3471A01ADEC6B3005B4344 /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EE34719F1ADEC6B3005B4344 /* libc++.dylib */; };
 		EE3471A41ADEC753005B4344 /* libstdc++.6.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EE3471A31ADEC753005B4344 /* libstdc++.6.dylib */; };
-		EEC481E71ADC2843009A8C66 /* MainPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC481E61ADC2843009A8C66 /* MainPageViewController.m */; };
-		EEC481EA1ADC294D009A8C66 /* PULoginLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EEC481E91ADC294D009A8C66 /* PULoginLoginViewController.m */; };
+		EED0684C1AE6B29400C17ECF /* PUHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EED0684B1AE6B29400C17ECF /* PUHomeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +102,16 @@
 		BFF50CE41AC318DC003CF0C8 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BFF50CE81AC3191F003CF0C8 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BFF50CEA1AC33E07003CF0C8 /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
+		EE044ACF1B02630A0052CC67 /* PUProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PUProfileViewController.h; sourceTree = "<group>"; };
+		EE044AD01B02630A0052CC67 /* PUProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PUProfileViewController.m; sourceTree = "<group>"; };
+		EE044AD21B0263150052CC67 /* PUSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PUSettingsViewController.h; sourceTree = "<group>"; };
+		EE044AD31B0263150052CC67 /* PUSettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PUSettingsViewController.m; sourceTree = "<group>"; };
+		EE044AD61B0501720052CC67 /* createRoute@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "createRoute@2x.png"; sourceTree = "<group>"; };
+		EE044AD71B0501720052CC67 /* feed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "feed@2x.png"; sourceTree = "<group>"; };
+		EE044AD81B0501720052CC67 /* profile@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "profile@2x.png"; sourceTree = "<group>"; };
+		EE044AD91B0501720052CC67 /* settings@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settings@2x.png"; sourceTree = "<group>"; };
+		EE044AE11B0A4A370052CC67 /* PUCreateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PUCreateViewController.h; sourceTree = "<group>"; };
+		EE044AE21B0A4A370052CC67 /* PUCreateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PUCreateViewController.m; sourceTree = "<group>"; };
 		EE3471971ADEC606005B4344 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		EE3471991ADEC65C005B4344 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		EE34719B1ADEC692005B4344 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
@@ -103,10 +119,8 @@
 		EE34719F1ADEC6B3005B4344 /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
 		EE3471A11ADEC6D0005B4344 /* libstdc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.dylib"; path = "usr/lib/libstdc++.dylib"; sourceTree = SDKROOT; };
 		EE3471A31ADEC753005B4344 /* libstdc++.6.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libstdc++.6.dylib"; path = "usr/lib/libstdc++.6.dylib"; sourceTree = SDKROOT; };
-		EEC481E51ADC2843009A8C66 /* MainPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainPageViewController.h; sourceTree = "<group>"; };
-		EEC481E61ADC2843009A8C66 /* MainPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainPageViewController.m; sourceTree = "<group>"; };
-		EEC481E81ADC294D009A8C66 /* PULoginLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PULoginLoginViewController.h; sourceTree = "<group>"; };
-		EEC481E91ADC294D009A8C66 /* PULoginLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PULoginLoginViewController.m; sourceTree = "<group>"; };
+		EED0684A1AE6B29400C17ECF /* PUHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PUHomeViewController.h; sourceTree = "<group>"; };
+		EED0684B1AE6B29400C17ECF /* PUHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PUHomeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +174,7 @@
 		BFCBD2871AC1FDA600B66689 = {
 			isa = PBXGroup;
 			children = (
+				EE044AD51B05015B0052CC67 /* Resources */,
 				BFCBD2B91AC1FDE700B66689 /* Frameworks */,
 				BFCBD2921AC1FDA600B66689 /* Puul */,
 				BFCBD2AC1AC1FDA700B66689 /* PuulTests */,
@@ -250,16 +265,8 @@
 		BFCBD2D81AC1FE2300B66689 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				BFF50CDC1AC317ED003CF0C8 /* PULoginViewController.h */,
-				BFF50CDD1AC317ED003CF0C8 /* PULoginViewController.m */,
-				BFF50CD61AC317E2003CF0C8 /* PUSignUpViewController.h */,
-				BFF50CD71AC317E2003CF0C8 /* PUSignUpViewController.m */,
-				BFF50CD81AC317E2003CF0C8 /* PUStartViewController.h */,
-				BFF50CD91AC317E2003CF0C8 /* PUStartViewController.m */,
-				EEC481E81ADC294D009A8C66 /* PULoginLoginViewController.h */,
-				EEC481E91ADC294D009A8C66 /* PULoginLoginViewController.m */,
-				EEC481E51ADC2843009A8C66 /* MainPageViewController.h */,
-				EEC481E61ADC2843009A8C66 /* MainPageViewController.m */,
+				EED068491AE6B26200C17ECF /* Main VC's */,
+				EED068481AE6B24E00C17ECF /* Initial VC's */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -292,6 +299,45 @@
 				BFE6707F1AC3787E0091598C /* UIColor+PUColors.m */,
 			);
 			name = Extensions;
+			sourceTree = "<group>";
+		};
+		EE044AD51B05015B0052CC67 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EE044AD61B0501720052CC67 /* createRoute@2x.png */,
+				EE044AD71B0501720052CC67 /* feed@2x.png */,
+				EE044AD81B0501720052CC67 /* profile@2x.png */,
+				EE044AD91B0501720052CC67 /* settings@2x.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		EED068481AE6B24E00C17ECF /* Initial VC's */ = {
+			isa = PBXGroup;
+			children = (
+				BFF50CDC1AC317ED003CF0C8 /* PULoginViewController.h */,
+				BFF50CDD1AC317ED003CF0C8 /* PULoginViewController.m */,
+				BFF50CD61AC317E2003CF0C8 /* PUSignUpViewController.h */,
+				BFF50CD71AC317E2003CF0C8 /* PUSignUpViewController.m */,
+				BFF50CD81AC317E2003CF0C8 /* PUStartViewController.h */,
+				BFF50CD91AC317E2003CF0C8 /* PUStartViewController.m */,
+			);
+			name = "Initial VC's";
+			sourceTree = "<group>";
+		};
+		EED068491AE6B26200C17ECF /* Main VC's */ = {
+			isa = PBXGroup;
+			children = (
+				EED0684A1AE6B29400C17ECF /* PUHomeViewController.h */,
+				EED0684B1AE6B29400C17ECF /* PUHomeViewController.m */,
+				EE044ACF1B02630A0052CC67 /* PUProfileViewController.h */,
+				EE044AD01B02630A0052CC67 /* PUProfileViewController.m */,
+				EE044AD21B0263150052CC67 /* PUSettingsViewController.h */,
+				EE044AD31B0263150052CC67 /* PUSettingsViewController.m */,
+				EE044AE11B0A4A370052CC67 /* PUCreateViewController.h */,
+				EE044AE21B0A4A370052CC67 /* PUCreateViewController.m */,
+			);
+			name = "Main VC's";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -377,8 +423,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE044ADB1B0501720052CC67 /* feed@2x.png in Resources */,
+				EE044ADD1B0501720052CC67 /* settings@2x.png in Resources */,
+				EE044ADA1B0501720052CC67 /* createRoute@2x.png in Resources */,
 				BFF50CE91AC3191F003CF0C8 /* Info.plist in Resources */,
 				BFF50CEB1AC33E07003CF0C8 /* Launch Screen.xib in Resources */,
+				EE044ADC1B0501720052CC67 /* profile@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,17 +479,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EEC481EA1ADC294D009A8C66 /* PULoginLoginViewController.m in Sources */,
-				EEC481E71ADC2843009A8C66 /* MainPageViewController.m in Sources */,
+				EED0684C1AE6B29400C17ECF /* PUHomeViewController.m in Sources */,
 				BFF50CDA1AC317E2003CF0C8 /* PUSignUpViewController.m in Sources */,
 				BFF50CDB1AC317E2003CF0C8 /* PUStartViewController.m in Sources */,
 				BFF50CE11AC317F5003CF0C8 /* PURoute.m in Sources */,
 				BFF50CD51AC317CE003CF0C8 /* AppDelegate.m in Sources */,
 				BFE670801AC3787E0091598C /* UIColor+PUColors.m in Sources */,
+				EE044AD41B0263150052CC67 /* PUSettingsViewController.m in Sources */,
 				BFF50CE51AC318DC003CF0C8 /* main.m in Sources */,
 				BFE6707B1AC35FA30091598C /* UIImage+PUImageExtensions.m in Sources */,
+				EE044AD11B02630A0052CC67 /* PUProfileViewController.m in Sources */,
 				BFE670831AC3806F0091598C /* PUUtility.m in Sources */,
 				BFF50CDE1AC317ED003CF0C8 /* PULoginViewController.m in Sources */,
+				EE044AE31B0A4A370052CC67 /* PUCreateViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

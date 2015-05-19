@@ -48,11 +48,12 @@
     route.departureTime = date;
     route.initialLocation = initialLocation;
     route.price = price;
-    
+        
     return route;
 }
 
 - (void)mapRoutesWithCompletionHandler:(routeCompletion)completion{
+    
     //the actual request object
     MKDirectionsRequest *request = [[MKDirectionsRequest alloc]init];
     

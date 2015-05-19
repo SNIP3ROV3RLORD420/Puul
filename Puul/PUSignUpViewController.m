@@ -158,12 +158,15 @@
 - (BOOL)textFieldShouldReturn:(UITextField *)textField{
     if (textField == usernameTextField) {
         [passwordTextField becomeFirstResponder];
+        [self checkUsername];
     }
     if (textField == passwordTextField) {
         [emailTextField becomeFirstResponder];
+        [self checkPassword];
     }
     if (textField == emailTextField) {
         [nameTextField becomeFirstResponder];
+        [self checkEmail];
     }
     if (textField == nameTextField) {
         [nameTextField resignFirstResponder];
@@ -173,22 +176,6 @@
 }
 
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string{
-    
-    if (textField == usernameTextField) {
-        if (textField.text.length > 0) {
-            username = YES;
-        }
-    }
-    if (textField == passwordTextField) {
-        if (textField.text.length > 0) {
-            password = YES;
-        }
-    }
-    if (textField == emailTextField) {
-        if (textField.text.length > 0) {
-            email = YES;
-        }
-    }
     if (textField == nameTextField) {
         if (nameTextField.text.length > 0) {
             name = YES;
@@ -201,6 +188,48 @@
 }
 
 #pragma mark - Helper Methods
+
+- (void)checkUsername{
+    [PUUtility usernameIsTaken:usernameTextField.text withCompletionBlock:^(BOOL taken, NSError *error) {
+        if (taken) {
+            username = NO;
+            usernameTextField.textColor = [UIColor redColor];
+            return;
+        }
+        else if (!error){
+            BOOL length = usernameTextField.text.length > 0;
+            BOOL characters = [PUUtility containsIllegalCharacters:usernameTextField.text];
+            username = length && characters;
+            usernameTextField.textColor = [UIColor redColor];
+        }
+        else{
+            //handle error
+            NSLog(@"%@", error);
+        }
+    }];
+}
+
+- (void)checkEmail{
+    email = [PUUtility isValidHWEmail:emailTextField.text];
+    if (!email) {
+        emailTextField.textColor = [UIColor redColor];
+    }
+    else{
+        emailTextField.textColor = [UIColor blackColor];
+    }
+}
+
+- (void)checkPassword{
+    BOOL chars = [PUUtility containsIllegalCharacters:passwordTextField.text];
+    BOOL length = passwordTextField.text.length > 5;
+    password = chars && length;
+    if (!password) {
+        passwordTextField.textColor = [UIColor redColor];
+    }
+    else{
+        passwordTextField.textColor = [UIColor blackColor];
+    }
+}
 
 - (void)reloadLastRow{
     [sTableView beginUpdates];

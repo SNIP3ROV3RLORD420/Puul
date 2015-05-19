@@ -55,7 +55,7 @@ typedef void (^routeCompletion)(NSArray *routes, NSError *error);
  will be found and set automatically using location services
 
  */
-+ (PURoute*)routeFromLocation:(PFGeoPoint*)initialLocation toLocation:(PFGeoPoint*)finalLocation withDepartureTime:(NSDate*)date withPrice:(NSNumber*)price;;
++ (PURoute*)routeFromLocation:(PFGeoPoint*)initialLocation toLocation:(PFGeoPoint*)finalLocation withDepartureTime:(NSDate*)date withPrice:(NSNumber*)price;
 
 /** Method that will return all of the possible routes that can be taken
  

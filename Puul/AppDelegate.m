@@ -11,6 +11,9 @@
 #import "PURoute.h"
 #import "PUStartViewController.h"
 #import "UIColor+PUColors.h"
+#import "PUSettingsViewController.h"
+#import "PUProfileViewController.h"
+#import "PUHomeViewController.h"
 
 @interface AppDelegate ()
 
@@ -31,10 +34,19 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
     
-    [self setUpForNewUser];
+    if ([PFUser currentUser]) {
+        [self setUpForCurrentUser];
+    }
+    else{
+        [self setUpForNewUser];
+    }
     
-    NSDictionary *textTitleOptions = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor], NSForegroundColorAttributeName];
+    NSDictionary *textTitleOptions = [NSDictionary dictionaryWithObjectsAndKeys:[UIColor whiteColor], NSForegroundColorAttributeName, nil];
     [[UINavigationBar appearance] setTitleTextAttributes:textTitleOptions];
+    
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
+
+    [[UITabBar appearance] setTintColor:[UIColor puulRedColor]];
     
     [self.window makeKeyAndVisible];
     
@@ -63,8 +75,36 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
+- (void)setNewRootViewController:(UIViewController*)newViewController{
+    self.window.rootViewController = newViewController;
+}
+
 - (void)setUpForCurrentUser{
+    PUHomeViewController *home = [[PUHomeViewController alloc]init];
+    UINavigationController *controller = [[UINavigationController alloc]initWithRootViewController:home];
+    controller.navigationBar.tintColor = [UIColor whiteColor];
+    controller.navigationBar.barTintColor = [UIColor puulRedColor];
+    controller.navigationBar.translucent = NO;
+    controller.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Feed" image:[UIImage imageNamed:@"feed"] tag:0];
     
+    PUSettingsViewController *settings = [[PUSettingsViewController alloc]init];
+    UINavigationController *controller1 = [[UINavigationController alloc]initWithRootViewController:settings];
+    controller1.navigationBar.tintColor = [UIColor whiteColor];
+    controller1.navigationBar.barTintColor = [UIColor puulRedColor];
+    controller1.navigationBar.translucent = NO;
+    controller1.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Settings" image:[UIImage imageNamed:@"settings"] tag:0];
+    
+    PUProfileViewController *profile = [[PUProfileViewController alloc]init];
+    UINavigationController *controller2 = [[UINavigationController alloc]initWithRootViewController:profile];
+    controller2.navigationBar.tintColor = [UIColor whiteColor];
+    controller2.navigationBar.barTintColor = [UIColor puulRedColor];
+    controller2.navigationBar.translucent = NO;
+    controller2.tabBarItem = [[UITabBarItem alloc] initWithTitle:@"Profile" image:[UIImage imageNamed:@"profile"] tag:0];
+    
+    UITabBarController *tab = [[UITabBarController alloc]init];
+    [tab setViewControllers:@[controller, controller2, controller1]];
+
+    self.window.rootViewController = tab;
 }
 
 - (void)setUpForNewUser{

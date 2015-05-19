@@ -7,9 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <Parse/Parse.h>
+
+typedef void (^PUUtilityBlock)(BOOL taken, NSError* error);
 
 @interface PUUtility : NSObject
 
 + (BOOL)containsIllegalCharacters:(NSString *)string;
+
++ (BOOL)isValidHWEmail:(NSString *)checkString;
+
++ (void)usernameIsTaken:(NSString*)string withCompletionBlock:(PUUtilityBlock)block;
 
 @end
